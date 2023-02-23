@@ -14,7 +14,7 @@ app.use(
     optionsSuccessStatus: 200,
   })
 );
-
+app.use(express.json());
 app.use("/", userRoute);
 
 const port = process.env.PORT || 3002;

@@ -20,11 +20,20 @@ const createUser = async (req, res) => {
 
 const updateUsers = async (req, res) => {
   try {
-    const updated = await User.findByIdAndUpdate(req.id, req.body);
+    const updated = await User.findByIdAndUpdate(req.params.id, req.body);
     res.status(200).json(updated);
   } catch (error) {
     res.status(404).json(error);
   }
 };
 
-module.exports = { getAllUser, createUser, updateUsers };
+const deleteUsers = async (req, res) => {
+  try {
+    const deleted = await User.findByIdAndDelete(req.params.id);
+    res.status(200).json("deleted");
+  } catch (error) {
+    res.status(404).json(error);
+  }
+};
+
+module.exports = { getAllUser, createUser, updateUsers, deleteUsers };
