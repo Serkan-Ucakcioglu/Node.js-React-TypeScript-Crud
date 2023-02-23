@@ -18,4 +18,13 @@ const createUser = async (req, res) => {
   }
 };
 
-module.exports = { getAllUser, createUser };
+const updateUsers = async (req, res) => {
+  try {
+    const updated = await User.findByIdAndUpdate(req.id, req.body);
+    res.status(200).json(updated);
+  } catch (error) {
+    res.status(404).json(error);
+  }
+};
+
+module.exports = { getAllUser, createUser, updateUsers };
