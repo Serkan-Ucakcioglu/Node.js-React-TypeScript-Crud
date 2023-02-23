@@ -9,4 +9,13 @@ const getAllUser = async (req, res) => {
   }
 };
 
-module.exports = { getAllUser };
+const createUser = async (req, res) => {
+  try {
+    const createUsers = await User.create(req.body);
+    res.status(200).json(createUsers);
+  } catch (error) {
+    res.status(404).json("there is something missing");
+  }
+};
+
+module.exports = { getAllUser, createUser };
