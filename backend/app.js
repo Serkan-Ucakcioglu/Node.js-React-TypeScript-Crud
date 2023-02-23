@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const connectDb = require("./config/connectDb");
+
+const userRoute = require("./router/userRoute");
 require("dotenv").config();
 
 connectDb();
@@ -12,10 +14,8 @@ app.use(
     optionsSuccessStatus: 200,
   })
 );
-app.get("/", (req, res) => {
-  res.send("hello from simple server :)");
-});
 
+app.use("/", userRoute);
 const port = process.env.PORT || 3002;
 app.listen(port, () =>
   console.log("> Server is up and running on port : " + port)
