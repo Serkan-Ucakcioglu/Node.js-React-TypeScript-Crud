@@ -28,6 +28,8 @@ function EditModal({ user }: any) {
     } else {
       mutate("/users", updateUser(user?._id, datas));
     }
+    close();
+    reset();
   };
 
   return (
