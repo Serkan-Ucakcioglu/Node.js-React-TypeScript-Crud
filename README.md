@@ -2,9 +2,8 @@
 ### About
 npm install <br>
 cd backend <br>
+You need to create an Env file and make a mongo connection.
 npm start <br>
-
-after go to link : https://serkan-ts.netlify.app/
 
 
 ### List 
