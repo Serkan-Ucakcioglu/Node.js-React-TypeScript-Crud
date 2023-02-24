@@ -16,3 +16,7 @@ export const addUser = async (data: [] | {}) => {
 export const updateUser = async (id: String, data: [] | {}) => {
   const response = await api.put(`/${id}`, data);
 };
+
+export const deleteUser = async (id: String) => {
+  const response = await api.delete(`/${id}`);
+};

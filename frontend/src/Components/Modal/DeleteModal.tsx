@@ -1,11 +1,20 @@
 import Close from "../../assets/Close";
 import TrashSvg from "../../assets/TrashSvg";
 import useShowModel from "../../hooks/useShowModel";
+import { useSWRConfig } from "swr";
+import { deleteUser } from "../../api/api";
 
 type ID = { id: String };
 
 function DeleteModal({ id }: ID) {
   const { show, active, close } = useShowModel();
+
+  const { mutate } = useSWRConfig();
+
+  const deleted = () => {
+    mutate("/users", deleteUser(id));
+  };
+
   return (
     <>
       <button onClick={() => active()}>
@@ -51,9 +60,10 @@ function DeleteModal({ id }: ID) {
                   <button
                     data-modal-hide="popup-modal"
                     type="button"
+                    onClick={deleted}
                     className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
                   >
-                    Yes, I'm sure
+                    Delete
                   </button>
                   <button
                     onClick={() => close()}
