@@ -3,10 +3,13 @@ import Close from "../../assets/Close";
 import EditSvg from "../../assets/EditSvg";
 import useShowModel from "../../hooks/useShowModel";
 import InputList from "./InputList";
+import { useSWRConfig } from "swr";
+import { addUser } from "../../api/api";
 
 type Inputs = {
   example: string;
   exampleRequired: string;
+  datas?: any;
 };
 
 function EditModal({ user }: any) {
@@ -16,8 +19,15 @@ function EditModal({ user }: any) {
     reset,
     formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const { mutate } = useSWRConfig();
+
   const { show, active, close } = useShowModel();
+  const onSubmit: SubmitHandler<Inputs> = (datas) => {
+    if (!user) {
+      mutate("/users", addUser(datas));
+    }
+  };
+
   return (
     <>
       <button

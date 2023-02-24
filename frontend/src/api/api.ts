@@ -8,3 +8,7 @@ export const getAllUser = async () => {
   const { data } = await api.get("/users");
   return data;
 };
+
+export const addUser = async (data: [] | {}) => {
+  const response = await api.post("/create", data);
+};

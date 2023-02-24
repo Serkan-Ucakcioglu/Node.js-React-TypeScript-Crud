@@ -11,18 +11,18 @@ export interface UserList {
 }
 
 function Home() {
-  const {
-    data = [],
-    error,
-    isLoading,
-  } = useSWR<UserList[]>("/users", getAllUser);
+  const { data, error, isLoading } = useSWR<UserList[]>("/users", getAllUser);
+  console.log(data);
 
   return (
     <div>
       <EditModal />
-      {data?.map((user) => {
-        return <Card key={user?._id} user={user} />;
-      })}
+      <div className="flex flex-wrap gap-4 mt-6">
+        {data &&
+          data?.map((user) => {
+            return <Card key={user?._id} user={user} />;
+          })}
+      </div>
     </div>
   );
 }
