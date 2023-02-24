@@ -2,6 +2,7 @@ import React from "react";
 import EditSvg from "../assets/EditSvg";
 import TrashSvg from "../assets/TrashSvg";
 import { UserList } from "./Home";
+import DeleteModal from "./Modal/DeleteModal";
 
 interface users {
   user: UserList;
@@ -16,10 +17,7 @@ function Card({ user }: users) {
       </div>
       <span>{user.email}</span>
       <span>{user.title}</span>
-      <span className="w-full flex justify-center items-center">
-        {" "}
-        <TrashSvg />
-      </span>
+      <DeleteModal />
     </div>
   );
 }
