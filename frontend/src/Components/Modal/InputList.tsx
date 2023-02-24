@@ -24,7 +24,7 @@ function InputList({ register, errors }: any) {
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
           placeholder="John Doe"
         />
-        <span className="text-red-500 text-left text-sm text-black">
+        <span className="flex flex-start  text-red-500 text-left text-sm text-black">
           {errors?.name?.message}
         </span>
       </div>
@@ -40,7 +40,7 @@ function InputList({ register, errors }: any) {
           placeholder="serkanuckc123@gmail.com"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
         />
-        <span className="text-red-500 text-left text-sm text-black">
+        <span className="flex flex-start  text-red-500 text-left text-sm text-black">
           {errors?.email?.message}
         </span>
       </div>
@@ -64,7 +64,7 @@ function InputList({ register, errors }: any) {
           placeholder="Hello World !"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
         />
-        <span className="text-red-500 text-left text-sm text-black">
+        <span className="flex flex-start text-red-500 text-left text-sm text-black">
           {errors?.title?.message}
         </span>
       </div>
