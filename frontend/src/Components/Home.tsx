@@ -1,7 +1,7 @@
-import { ReactNode } from "react";
 import useSWR from "swr";
 import { getAllUser } from "../api/api";
 import Card from "./Card";
+import EditModal from "./Modal/EditModal";
 
 export interface UserList {
   _id: string;
@@ -19,6 +19,7 @@ function Home() {
 
   return (
     <div>
+      <EditModal />
       {data?.map((user) => {
         return <Card key={user?._id} user={user} />;
       })}

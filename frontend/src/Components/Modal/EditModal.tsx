@@ -4,14 +4,13 @@ import Close from "../../assets/Close";
 import EditSvg from "../../assets/EditSvg";
 import useShowModel from "../../hooks/useShowModel";
 import InputList from "./InputList";
-import { users } from "../Card";
 
 type Inputs = {
   example: string;
   exampleRequired: string;
 };
 
-function EditModal({ user }: users) {
+function EditModal({ user }: any) {
   const {
     register,
     handleSubmit,
@@ -22,8 +21,12 @@ function EditModal({ user }: users) {
   const { show, active, close } = useShowModel();
   return (
     <>
-      <button onClick={() => active()} type="button">
-        <EditSvg />
+      <button
+        className={`${!user && "bg-blue-500 px-3 py-1 rounded text-white"}`}
+        onClick={() => active()}
+        type="button"
+      >
+        {user ? <EditSvg /> : "Add"}
       </button>
 
       {show ? (
