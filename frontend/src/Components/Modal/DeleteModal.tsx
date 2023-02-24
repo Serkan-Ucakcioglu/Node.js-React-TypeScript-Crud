@@ -1,8 +1,9 @@
-import React from "react";
 import TrashSvg from "../../assets/TrashSvg";
 import useShowModel from "../../hooks/useShowModel";
 
-function DeleteModal() {
+type ID = { id: String };
+
+function DeleteModal({ id }: ID) {
   const { show, active, close } = useShowModel();
   return (
     <>
@@ -12,7 +13,6 @@ function DeleteModal() {
       {show ? (
         <>
           <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
-
           <div
             id="popup-modal"
             className="fixed flex justify-center top-52 left-52 right-0 z-50  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
