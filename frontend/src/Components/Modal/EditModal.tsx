@@ -1,4 +1,3 @@
-import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Close from "../../assets/Close";
 import EditSvg from "../../assets/EditSvg";
