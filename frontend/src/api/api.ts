@@ -12,3 +12,7 @@ export const getAllUser = async () => {
 export const addUser = async (data: [] | {}) => {
   const response = await api.post("/create", data);
 };
+
+export const updateUser = async (id: String, data: [] | {}) => {
+  const response = await api.put(`/${id}`, data);
+};
