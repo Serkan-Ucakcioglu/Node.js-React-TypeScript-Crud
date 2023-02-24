@@ -2,12 +2,6 @@ import React from "react";
 import TrashSvg from "../../assets/TrashSvg";
 import useShowModel from "../../hooks/useShowModel";
 
-type Modal = {
-  show: boolean;
-  active: () => void;
-  close: () => void;
-};
-
 function DeleteModal() {
   const { show, active, close } = useShowModel();
   return (
