@@ -1,4 +1,10 @@
 # Node-JS---React-TypeScript-Crud
+npm install <br>
+cd backend <br>
+npm start <br>
+
+after go to link : https://serkan-ts.netlify.app/
+
 
 ### List 
 <img width="1541" alt="image" src="https://user-images.githubusercontent.com/98692987/221163103-ab8dea80-6fa2-4081-9ec5-19b3d4f206ef.png">
