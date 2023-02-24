@@ -1,6 +1,3 @@
-import React from "react";
-import EditSvg from "../assets/EditSvg";
-import TrashSvg from "../assets/TrashSvg";
 import { UserList } from "./Home";
 import DeleteModal from "./Modal/DeleteModal";
 import EditModal from "./Modal/EditModal";
