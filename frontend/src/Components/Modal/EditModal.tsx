@@ -13,7 +13,6 @@ function EditModal() {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
@@ -61,7 +60,7 @@ function EditModal() {
                     User
                   </h3>
                   <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
-                    <InputList />
+                    <InputList register={register} errors={errors} />
                     <button
                       type="submit"
                       className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
