@@ -1,8 +1,22 @@
 import React from "react";
+import { useForm, SubmitHandler } from "react-hook-form";
 import EditSvg from "../../assets/EditSvg";
 import useShowModel from "../../hooks/useShowModel";
+import InputList from "./InputList";
+
+type Inputs = {
+  example: string;
+  exampleRequired: string;
+};
 
 function EditModal() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
   const { show, active, close } = useShowModel();
   return (
     <>
@@ -46,41 +60,8 @@ function EditModal() {
                   <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">
                     User
                   </h3>
-                  <form className="space-y-6" action="#">
-                    <div>
-                      <label className="block text-left mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                        Your Name
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="John Doe"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-left mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                        Your Email
-                      </label>
-                      <input
-                        type="email"
-                        placeholder="serkanuckc123@gmail.com"
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-left mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                        Your Title
-                      </label>
-                      <input
-                        type="title"
-                        placeholder="Hello World !"
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        required
-                      />
-                    </div>
+                  <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
+                    <InputList />
                     <button
                       type="submit"
                       className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
