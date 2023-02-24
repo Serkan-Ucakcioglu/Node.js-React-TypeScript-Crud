@@ -43,6 +43,9 @@ function EditModal() {
                   <span className="sr-only">Close modal</span>
                 </button>
                 <div className="px-6 py-6 lg:px-8">
+                  <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">
+                    User
+                  </h3>
                   <form className="space-y-6" action="#">
                     <div>
                       <label className="block text-left mb-2 text-sm font-medium text-gray-900 dark:text-white">
