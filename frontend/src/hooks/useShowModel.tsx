@@ -11,7 +11,7 @@ function useShowModel() {
     setShow(false);
   };
 
-  return { active, close };
+  return { active, close, show };
 }
 
 export default useShowModel;
