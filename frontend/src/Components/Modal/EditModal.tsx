@@ -4,7 +4,7 @@ import EditSvg from "../../assets/EditSvg";
 import useShowModel from "../../hooks/useShowModel";
 import InputList from "./InputList";
 import { useSWRConfig } from "swr";
-import { addUser } from "../../api/api";
+import { addUser, updateUser } from "../../api/api";
 
 type Inputs = {
   example: string;
@@ -25,6 +25,8 @@ function EditModal({ user }: any) {
   const onSubmit: SubmitHandler<Inputs> = (datas) => {
     if (!user) {
       mutate("/users", addUser(datas));
+    } else {
+      mutate("/users", updateUser(user?._id, datas));
     }
   };
 
