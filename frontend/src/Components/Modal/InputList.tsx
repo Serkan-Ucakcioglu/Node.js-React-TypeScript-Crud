@@ -1,6 +1,6 @@
 import React from "react";
 
-function InputList({ register, errors }: any) {
+function InputList({ register, errors, user }: any) {
   return (
     <>
       <div>
@@ -10,6 +10,7 @@ function InputList({ register, errors }: any) {
         <input
           type="text"
           id="name"
+          defaultValue={user?.name}
           {...register("name", {
             required: "required!",
             minLength: {
@@ -36,6 +37,7 @@ function InputList({ register, errors }: any) {
           {...register("email", {
             required: "required!",
           })}
+          defaultValue={user?.email}
           type="email"
           placeholder="serkanuckc123@gmail.com"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
@@ -61,6 +63,7 @@ function InputList({ register, errors }: any) {
               message: "Maximum Length 40!",
             },
           })}
+          defaultValue={user?.title}
           placeholder="Hello World !"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
         />
