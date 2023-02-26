@@ -1,4 +1,4 @@
-# Node-JS---React-TypeScript-Crud
+# Node-JS-React-TypeScript-Crud
 ### About
 npm install <br>
 cd backend <br>
