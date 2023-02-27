@@ -9,11 +9,6 @@ export const getAllUser = async () => {
   const { data } = await api.get("/users");
   return data;
 };
-interface DataType {
-  name: string;
-  email: string;
-  title: string;
-}
 
 export const addUser = async (data: Inputs) => {
   const response = await api.post("/create", data);
