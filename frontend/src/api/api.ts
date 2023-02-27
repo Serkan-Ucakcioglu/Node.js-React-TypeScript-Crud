@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Inputs } from "../Components/Modal/EditModal";
 
 const api = axios.create({
   baseURL: "http://localhost:3002/",
@@ -14,7 +15,7 @@ interface DataType {
   title: string;
 }
 
-export const addUser = async (data: []) => {
+export const addUser = async (data: Inputs) => {
   const response = await api.post("/create", data);
 };
 

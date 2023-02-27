@@ -7,14 +7,12 @@ import { useSWRConfig } from "swr";
 import { addUser, updateUser } from "../../api/api";
 import { UserList } from "../Home";
 
-export type Inputs = {
-  example: string;
-  exampleRequired: string;
-  _id?: string;
+export interface Inputs {
+  _id: string;
   name: string;
   email: string;
   title: string;
-};
+}
 
 function EditModal({ user }: any) {
   const {
@@ -26,7 +24,7 @@ function EditModal({ user }: any) {
   const { mutate } = useSWRConfig();
 
   const { show, active, close } = useShowModel();
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
+  const onSubmit = (data: Inputs) => {
     if (!user) {
       mutate("/users", addUser(data));
     } else {
