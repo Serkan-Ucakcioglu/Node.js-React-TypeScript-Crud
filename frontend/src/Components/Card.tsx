@@ -1,4 +1,3 @@
-import { UserList } from "./Home";
 import DeleteModal from "./Modal/DeleteModal";
 import EditModal from "./Modal/EditModal";
 
