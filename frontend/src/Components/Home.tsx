@@ -1,17 +1,10 @@
 import useSWR from "swr";
 import { getAllUser } from "../api/api";
 import Card from "./Card";
-import EditModal from "./Modal/EditModal";
-
-export interface UserList {
-  _id: string;
-  name: string;
-  email: string;
-  title: string;
-}
+import EditModal, { Inputs } from "./Modal/EditModal";
 
 function Home() {
-  const { data, error, isLoading } = useSWR<UserList[]>("/users", getAllUser);
+  const { data, error, isLoading } = useSWR<Inputs[]>("/users", getAllUser);
 
   return (
     <div>

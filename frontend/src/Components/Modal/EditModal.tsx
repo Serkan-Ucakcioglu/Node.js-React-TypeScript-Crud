@@ -5,7 +5,6 @@ import useShowModel from "../../hooks/useShowModel";
 import InputList from "./InputList";
 import { useSWRConfig } from "swr";
 import { addUser, updateUser } from "../../api/api";
-import { UserList } from "../Home";
 
 export interface Inputs {
   _id: string;
