@@ -12,7 +12,6 @@ export interface UserList {
 
 function Home() {
   const { data, error, isLoading } = useSWR<UserList[]>("/users", getAllUser);
-  console.log(data);
 
   return (
     <div>

@@ -1,6 +1,15 @@
 import React from "react";
+import { FieldErrors, UseFormRegister } from "react-hook-form";
+import { UserList } from "../Home";
+import { Inputs } from "./EditModal";
 
-function InputList({ register, errors, user }: any) {
+export type IUSER = {
+  user: UserList;
+  register: UseFormRegister<Inputs>;
+  errors: FieldErrors<Inputs>;
+};
+
+function InputList({ register, errors, user }: IUSER) {
   return (
     <>
       <div>

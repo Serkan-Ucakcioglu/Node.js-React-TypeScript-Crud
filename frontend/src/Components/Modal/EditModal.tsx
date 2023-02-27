@@ -5,11 +5,15 @@ import useShowModel from "../../hooks/useShowModel";
 import InputList from "./InputList";
 import { useSWRConfig } from "swr";
 import { addUser, updateUser } from "../../api/api";
+import { UserList } from "../Home";
 
-type Inputs = {
+export type Inputs = {
   example: string;
   exampleRequired: string;
-  datas?: any;
+  _id?: string;
+  name: string;
+  email: string;
+  title: string;
 };
 
 function EditModal({ user }: any) {
@@ -22,11 +26,11 @@ function EditModal({ user }: any) {
   const { mutate } = useSWRConfig();
 
   const { show, active, close } = useShowModel();
-  const onSubmit: SubmitHandler<Inputs> = (datas) => {
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
     if (!user) {
-      mutate("/users", addUser(datas));
+      mutate("/users", addUser(data));
     } else {
-      mutate("/users", updateUser(user?._id, datas));
+      mutate("/users", updateUser(user?._id, data));
     }
     close();
     reset();
