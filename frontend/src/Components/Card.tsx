@@ -1,8 +1,8 @@
 import DeleteModal from "./Modal/DeleteModal";
-import EditModal from "./Modal/EditModal";
+import EditModal, { Inputs } from "./Modal/EditModal";
 
 export interface users {
-  user: UserList;
+  user: Inputs;
 }
 
 function Card({ user }: users) {
