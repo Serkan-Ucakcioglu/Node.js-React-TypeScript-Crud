@@ -5,7 +5,6 @@ import EditModal, { Inputs } from "./Modal/EditModal";
 
 function Home() {
   const { data, error, isLoading } = useSWR<Inputs[]>("/users", getAllUser);
-
   return (
     <div>
       <EditModal />
