@@ -14,7 +14,6 @@ function DeleteModal({ id }: ID) {
   const deleted = () => {
     mutate("/users", deleteUser(id));
   };
-
   return (
     <>
       <button onClick={() => active()}>

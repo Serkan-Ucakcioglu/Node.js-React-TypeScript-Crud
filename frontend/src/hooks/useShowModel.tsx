@@ -10,7 +10,6 @@ function useShowModel() {
   const close = () => {
     setShow(false);
   };
-
   return { active, close, show };
 }
 

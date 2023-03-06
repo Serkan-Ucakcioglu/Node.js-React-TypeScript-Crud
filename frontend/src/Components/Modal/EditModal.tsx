@@ -20,6 +20,7 @@ function EditModal({ user }: any) {
     reset,
     formState: { errors },
   } = useForm<Inputs>();
+
   const { mutate } = useSWRConfig();
 
   const { show, active, close } = useShowModel();
@@ -32,7 +33,6 @@ function EditModal({ user }: any) {
     close();
     reset();
   };
-
   return (
     <>
       <button
