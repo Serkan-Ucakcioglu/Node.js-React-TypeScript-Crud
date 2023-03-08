@@ -5,6 +5,10 @@ import EditModal, { Inputs } from "./Modal/EditModal";
 
 function Home() {
   const { data, error, isLoading } = useSWR<Inputs[]>("/users", getAllUser);
+
+  if (error) {
+    return <h1 className="text-red-500 text-center text-xl">Error...</h1>;
+  }
   return (
     <div>
       <EditModal />
