@@ -8,7 +8,7 @@ function Home() {
   const { data, error, isLoading } = useSWR<Inputs[]>("/users", getAllUser);
 
   if (error) {
-    return <h1 className="text-red-500 text-center text-xl">Error...</h1>;
+    return <h1 className="text-red-500 text-center text-2xl">Error...</h1>;
   }
   if (isLoading) {
     return <Loader />;
