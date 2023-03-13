@@ -20,6 +20,7 @@ export const updateUser = async (id: String, data: [] | {}) => {
   const response = await api.put(`/${id}`, data);
 };
 
+// delete user
 export const deleteUser = async (id: String) => {
   const response = await api.delete(`/${id}`);
 };
