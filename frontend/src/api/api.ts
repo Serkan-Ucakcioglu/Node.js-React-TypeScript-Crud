@@ -10,6 +10,7 @@ export const getAllUser = async () => {
   return data;
 };
 
+//Add user
 export const addUser = async (data: Inputs) => {
   const response = await api.post("/create", data);
 };
