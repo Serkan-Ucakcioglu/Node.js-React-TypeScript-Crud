@@ -15,6 +15,7 @@ export const addUser = async (data: Inputs) => {
   const response = await api.post("/create", data);
 };
 
+//updated user
 export const updateUser = async (id: String, data: [] | {}) => {
   const response = await api.put(`/${id}`, data);
 };
