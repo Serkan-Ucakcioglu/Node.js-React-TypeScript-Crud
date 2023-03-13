@@ -24,6 +24,7 @@ function EditModal({ user }: any) {
   const { mutate } = useSWRConfig();
 
   const { show, active, close } = useShowModel();
+
   const onSubmit = (data: Inputs) => {
     if (!user) {
       mutate("/users", addUser(data));
