@@ -34,6 +34,7 @@ function EditModal({ user }: any) {
     close();
     reset();
   };
+
   return (
     <>
       <button
