@@ -4,7 +4,7 @@ function TrashSvg() {
   return (
     <>
       <svg
-        width="24px"
+        width="30px"
         height="24px"
         className="h-10"
         viewBox="0 0 24 24"
