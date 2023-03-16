@@ -30,7 +30,7 @@ function InputList({ register, errors, user }: IUSER) {
               message: "Maximum Length 15!",
             },
           })}
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+          className="bg-gray-50 hover:border-gray-600 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
           placeholder="John Doe"
         />
         <span className="flex flex-start  text-red-500 text-left text-sm text-black">
@@ -48,7 +48,7 @@ function InputList({ register, errors, user }: IUSER) {
           defaultValue={user?.email}
           type="email"
           placeholder="serkanuckc123@gmail.com"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+          className="bg-gray-50 hover:border-gray-600 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
         />
         <span className="flex flex-start  text-red-500 text-left text-sm text-black">
           {errors?.email?.message}
@@ -73,7 +73,7 @@ function InputList({ register, errors, user }: IUSER) {
           })}
           defaultValue={user?.title}
           placeholder="Hello World !"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+          className="bg-gray-50 hover:border-gray-600 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
         />
         <span className="flex flex-start text-red-500 text-left text-sm text-black">
           {errors?.title?.message}

@@ -53,7 +53,7 @@ function EditModal({ user }: any) {
           <div
             id="authentication-modal"
             aria-hidden="true"
-            className="fixed  flex justify-center top-0 left-0 right-0 z-50  w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
+            className="fixed duration-700 flex justify-center top-0 left-0 right-0 z-50  w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
           >
             <div className="relative w-full h-full max-w-md md:h-auto">
               <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
