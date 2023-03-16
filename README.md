@@ -2,7 +2,7 @@
 ### About
 npm install <br>
 cd backend <br>
-You need to create an Env file and make a mongo connection.<br<
+You need to create an Env file and make a mongo connection.<br>
 npm start <br>
 
 
