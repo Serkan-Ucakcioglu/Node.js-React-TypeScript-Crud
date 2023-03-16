@@ -39,7 +39,8 @@ function EditModal({ user }: any) {
     <>
       <button
         className={`${
-          !user && "bg-blue-500 transition-all	 px-3 py-1 rounded text-white"
+          !user &&
+          "bg-blue-500 hover:scale-125 transition-all	 px-3 py-1 rounded text-white"
         }`}
         onClick={() => active()}
         type="button"
