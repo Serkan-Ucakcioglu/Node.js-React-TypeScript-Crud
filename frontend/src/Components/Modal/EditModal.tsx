@@ -38,7 +38,9 @@ function EditModal({ user }: any) {
   return (
     <>
       <button
-        className={`${!user && "bg-blue-500 px-3 py-1 rounded text-white"}`}
+        className={`${
+          !user && "bg-blue-500 transition-all	 px-3 py-1 rounded text-white"
+        }`}
         onClick={() => active()}
         type="button"
       >
@@ -51,7 +53,7 @@ function EditModal({ user }: any) {
           <div
             id="authentication-modal"
             aria-hidden="true"
-            className="fixed flex justify-center top-0 left-0 right-0 z-50  w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
+            className="fixed transition ease-in-out flex justify-center top-0 left-0 right-0 z-50  w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
           >
             <div className="relative w-full h-full max-w-md md:h-auto">
               <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
