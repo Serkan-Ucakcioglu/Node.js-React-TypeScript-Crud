@@ -7,7 +7,7 @@ export interface users {
 
 function Card({ user }: users) {
   return (
-    <div className="flex flex-col gap-y-3 items-center p-3 justify-start h-[180px] w-[225px] border border-gray-400 rounded">
+    <div className="flex shadow flex-col gap-y-3 items-center p-3 justify-start h-[180px] w-[225px] border border-gray-400 hover:border-gray-700 rounded">
       <div className="flex flex-row gap-2 items-center">
         <span>{user?.name}</span>
         <EditModal user={user} />
