@@ -5,7 +5,7 @@ function Delete() {
     <>
       <svg
         aria-hidden="true"
-        className="mx-auto mb-4 border border-white w-14 h-14"
+        className="mx-auto mb-4 border border-white w-14 h-14 hover:scale-125"
         fill="#ef4444"
         stroke="currentColor"
         viewBox="0 0 24 24"

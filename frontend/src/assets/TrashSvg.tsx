@@ -6,7 +6,7 @@ function TrashSvg() {
       <svg
         width="30px"
         height="24px"
-        className="h-10"
+        className="h-10 hover:scale-125"
         viewBox="0 0 24 24"
         fill="#ef4444"
         xmlns="http://www.w3.org/2000/svg"
